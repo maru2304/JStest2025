@@ -25,16 +25,24 @@
                 $("#disp1").css("font-size", "x-large");
                 $("#disp1").css("font-family", "fantasy");
                 $("#disp1").css("background-color", "lightgray");
-                var a=0;
-                var txt = "";
-                txt += "a: " + a + "<br>";
-                if (a=1) {
-                    txt += "TRUE<br>";
-                } else {
-                    txt += "FALSE<br>";
+                
+                let a = [10, 50, 30];
+                a.push(40);
+                a.unshift(0);
+                let msg="";
+                for(let i=0; i<a.length; i++) {
+                msg += i + ":" + a[i] + "<br>";
                 }
-                txt += "a: "+ a + "<br>";
-                 $("#disp2").html(txt);
+                $("#disp1").html(msg);
+                let p = a.pop();
+                let s = a.shift();
+                let msg2="";
+                for(let i=0; i<a.length; i++) {
+                msg2 += i + ":" + a[i] + "<br>";
+                }
+                msg2 += "p:" + p + "<br>";
+                msg2 += "s:" + s + "<br>";
+                $("#disp2").html(msg2);
             }
         </script>
     </head>
